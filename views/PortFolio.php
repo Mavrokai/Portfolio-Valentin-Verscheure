@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Valentin Verscheure, Développeur Web Créatif">
+    <link rel="stylesheet" href="../style/Tailwind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <title>Valentin VERSCHEURE - Développeur Web</title>
+</head>
+
+<body class="bg-[#1B0B0A] text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 bg-[#1B0B0A]/90 backdrop-blur z-50 h-20 flex items-center justify-between px-4 md:px-20">
+        <span class="text-2xl font-bold text-amber-400">V.V</span>
+
+        <!-- Liens desktop -->
+        <div class="hidden md:flex gap-8">
+            <a href="#accueil" class="hover:text-amber-400 transition-colors">Accueil</a>
+            <a href="#apropos" class="hover:text-amber-400 transition-colors">À propos</a>
+            <a href="#competences" class="hover:text-amber-400 transition-colors">Compétences</a>
+            <a href="#projets" class="hover:text-amber-400 transition-colors">Projets</a>
+            <a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
+        </div>
+
+        <!-- Menu mobile -->
+        <button id="menuBtn" class="md:hidden p-2">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Menu mobile dropdown -->
+    <div id="mobileMenu" class="md:hidden fixed top-20 w-full bg-[#1B0B0A] hidden">
+        <div class="flex flex-col p-4 gap-4 border-t border-amber-400/20">
+            <a href="#accueil" class="py-2 hover:text-amber-400">Accueil</a>
+            <a href="#apropos" class="py-2 hover:text-amber-400">À propos</a>
+            <a href="#competences" class="py-2 hover:text-amber-400">Compétences</a>
+            <a href="#projets" class="py-2 hover:text-amber-400">Projets</a>
+            <a href="#contact" class="py-2 hover:text-amber-400">Contact</a>
+        </div>
+    </div>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="min-h-screen pt-32 px-4 md:px-20 flex flex-col md:flex-row items-center justify-center gap-12">
+        <div class="md:w-1/2 space-y-6">
+            <h1 class="text-4xl md:text-6xl font-bold">
+                <span class="text-amber-400">Développeur Web</span><br>
+                Créatif & Passionné
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300">Je transforme vos idées en solutions numériques exceptionnelles</p>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center">
+            <img src="../assets/Valentin.webp" alt="Photo de Valentin Verscheure"
+                class="rounded-full w-64 h-64 md:w-96 md:h-96 object-cover border-4 border-amber-400">
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos" class="py-20 px-4 md:px-20 bg-[#2a1615]">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">À propos de moi</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20">
+                <h3 class="text-2xl text-amber-400 mb-4">Mon parcours</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Passionné par le développement web depuis plus de 2 ans, je me spécialise dans la création
+                    d'applications modernes et performantes. Mon approche allie expertise technique et sensibilité
+                    design pour créer des interfaces intuitives et engageantes.
+                </p>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20">
+                <h3 class="text-2xl text-amber-400 mb-4">Ma philosophie</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Je crois en un développement centré sur l'utilisateur. Chaque ligne de code doit servir
+                    à améliorer l'expérience finale. Mon objectif est de créer des solutions qui allient
+                    performance, élégance et fonctionnalité.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section Compétences -->
+    <section id="competences" class="py-20 px-4 md:px-20 bg-[#1B0B0A]">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Mes Compétences</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <!-- Carte Compétence -->
+
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-html5-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">HTML</h3>
+                    <p class="text-gray-300 text-sm"></p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-css3-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">CSS</h3>
+                    <p class="text-gray-300 text-sm"></p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-tailwindcss-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Tailwind css</h3>
+                    <p class="text-gray-300 text-sm"></p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-javascript-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+                    <p class="text-gray-300 text-sm">ES6+ et architectures modernes</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-php-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">PHP</h3>
+                    <p class="text-gray-300 text-sm">Backend et logique métier</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-laravel-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Laravel</h3>
+                    <p class="text-gray-300 text-sm"></p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-symfony-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Symfony</h3>
+                    <p class="text-gray-300 text-sm"></p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-react-original text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">React</h3>
+                    <p class="text-gray-300 text-sm">Développement d'applications modernes</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-vuejs-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Vue</h3>
+                    <p class="text-gray-300 text-sm"></p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-nodejs-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Node.JS</h3>
+                    <p class="text-gray-300 text-sm"></p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-sass-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">SASS</h3>
+                    <p class="text-gray-300 text-sm"></p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-nodejs-plain text-4xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Node.JS</h3>
+                    <p class="text-gray-300 text-sm"></p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-[#2a1615] rounded-lg border border-amber-400/20 hover:border-amber-400 transition-all">
+                <div class="text-center">
+                    <i class="devicon-mysql-plain-wordmark text-7xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">MySql</h3>
+                    <p class="text-gray-300 text-sm"></p>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- Ajouter d'autres technologies ici -->
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="py-20 px-4 md:px-20 bg-[#2a1615]">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Mes Projets</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Carte Projet -->
+            <div class="bg-[#1B0B0A] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src="../assets/spriteGenerator.png" alt="Projet 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">CSS Generator</h3>
+                    <div class="flex gap-4">
+                        <a href="lien-github" target="_blank"
+                            class="flex-1 text-center py-2 px-4 bg-amber-400 text-[#1B0B0A] rounded hover:bg-amber-500 transition-colors">
+                            Code Source
+                        </a>
+                        <a href="lien-demo" target="_blank"
+                            class="flex-1 text-center py-2 px-4 border border-amber-400 text-amber-400 rounded hover:bg-amber-400/10 transition-colors">
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-[#1B0B0A] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src="../assets/MaquetteIntro.png" alt="Projet 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Maquette - Introduction</h3>
+                    <div class="flex gap-4">
+                        <a href="lien-github" target="_blank"
+                            class="flex-1 text-center py-2 px-4 bg-amber-400 text-[#1B0B0A] rounded hover:bg-amber-500 transition-colors">
+                            Code Source
+                        </a>
+                        <a href="lien-demo" target="_blank"
+                            class="flex-1 text-center py-2 px-4 border border-amber-400 text-amber-400 rounded hover:bg-amber-400/10 transition-colors">
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-[#1B0B0A] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src="../assets/racingJS.png" alt="Projet 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Racing JS</h3>
+                    <div class="flex gap-4">
+                        <a href="lien-github" target="_blank"
+                            class="flex-1 text-center py-2 px-4 bg-amber-400 text-[#1B0B0A] rounded hover:bg-amber-500 transition-colors">
+                            Code Source
+                        </a>
+                        <a href="lien-demo" target="_blank"
+                            class="flex-1 text-center py-2 px-4 border border-amber-400 text-amber-400 rounded hover:bg-amber-400/10 transition-colors">
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-[#1B0B0A] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src="../assets/MaquetteResponsive.png" alt="Projet 4" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Maquette Responsive</h3>
+                    <div class="flex gap-4">
+                        <a href="lien-github" target="_blank"
+                            class="flex-1 text-center py-2 px-4 bg-amber-400 text-[#1B0B0A] rounded hover:bg-amber-500 transition-colors">
+                            Code Source
+                        </a>
+                        <a href="lien-demo" target="_blank"
+                            class="flex-1 text-center py-2 px-4 border border-amber-400 text-amber-400 rounded hover:bg-amber-400/10 transition-colors">
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-[#1B0B0A] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src="../assets/MyCinema.png" alt="Projet 5" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">My Cinema</h3>
+                    <div class="flex gap-4">
+                        <a href="lien-github" target="_blank"
+                            class="flex-1 text-center py-2 px-4 bg-amber-400 text-[#1B0B0A] rounded hover:bg-amber-500 transition-colors">
+                            Code Source
+                        </a>
+                        <a href="lien-demo" target="_blank"
+                            class="flex-1 text-center py-2 px-4 border border-amber-400 text-amber-400 rounded hover:bg-amber-400/10 transition-colors">
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-[#1B0B0A] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src="../assets/MyMeetic.png" alt="Projet 6" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">My Meetic</h3>
+                    <div class="flex gap-4">
+                        <a href="lien-github" target="_blank"
+                            class="flex-1 text-center py-2 px-4 bg-amber-400 text-[#1B0B0A] rounded hover:bg-amber-500 transition-colors">
+                            Code Source
+                        </a>
+                        <a href="lien-demo" target="_blank"
+                            class="flex-1 text-center py-2 px-4 border border-amber-400 text-amber-400 rounded hover:bg-amber-400/10 transition-colors">
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-[#1B0B0A] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src="../assets/MyTwitter.png" alt="Projet 7" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">My Twitter</h3>
+                    <div class="flex gap-4">
+                        <a href="lien-github" target="_blank"
+                            class="flex-1 text-center py-2 px-4 bg-amber-400 text-[#1B0B0A] rounded hover:bg-amber-500 transition-colors">
+                            Code Source
+                        </a>
+                        <a href="lien-demo" target="_blank"
+                            class="flex-1 text-center py-2 px-4 border border-amber-400 text-amber-400 rounded hover:bg-amber-400/10 transition-colors">
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-[#1B0B0A] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src="../assets/mySpotify.png" alt="Projet 8" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">My Spotify</h3>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/EpitechWebAcademiePromo2026/W-WEB-090-LIL-1-1-spotify-valentin.verscheure" target="_blank"
+                            class="flex-1 text-center py-2 px-4 bg-amber-400 text-[#1B0B0A] rounded hover:bg-amber-500 transition-colors">
+                            Code Source
+                        </a>
+                        <a href="lien-demo" target="_blank"
+                            class="flex-1 text-center py-2 px-4 border border-amber-400 text-amber-400 rounded hover:bg-amber-400/10 transition-colors">
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Répéter pour chaque projet -->
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-20 px-4 md:px-20 bg-[#1B0B0A]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Contact</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Coordonnées -->
+                <div class="flex items-center gap-4">
+                    <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <a href="mailto:valentin.59370@epitech.eu" class="hover:text-amber-400 transition-colors">valentin.59370@epitech.eu</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADjVADoAAAACXBIWXMAAAsTAAALEwEAmpwYAAADOUlEQVR4nO2bXWsTQRSGH0hKU/+AVbySCqJVxLSiFgUrvfCjiNZ4G++9UfwLgvjRFoVSa69URAUV4xdKQRQvxM/+DE3BpCDUetPIwFkISzbZ7MzsTsK+8ELYJHPmvMyZM+dkAilSpEiRIoXLyAIDwChQAM4KC/JMvZehC9EHjAPTwCLwD6i1oPrMD2AKOA7k6GDsAeaB5RCOt2IVmAOG6CAcBBYMOB/Et8AIDmMDcBdYsyhCPV8Am3AMZwyFQJSQOYUD6AFmEhDAzxuSjRLBOuClAyJ4fC4ZKnYRPjrgvJ/v4xSjB3jlgNPNNtFYwmTGAWfD7BlWUXDAybC0lk02JpQio7IC9NsQ4oGFyf4FHgKP5LXp8e/ZODbXDHMVyNfZyMszkzbUKXe/SSEWLAhRamCnZMHOG5NVZM0CVTXpx5wlW0aq1vkuEOKWrgg5KWw6XYhl3RPnuKWJxS2E4jEdIaa7SIjrOkIsdpEQ36OKkLGQ15MUYjVqd3yLxUklIYTi5ihCjHWhEIejCDHRhUKcjCJEUdPoZ+CC/EizoiHEioxxEfiiOadi3EJ88nWJhqQsbleIiu94nNUUoxh3aJxrMF7eJ0YrISq+6tTD+bibNWMaBi8FjFkvRjMhgkRQuBL3ZjmgYfAPMNhCjCAhmokwKGPHmj4zmgeqJWBHwNi7gMsNnl8FhgO+sxX4mcSBysQRu9xkZfSGfIaMsaQ5l28kXHQtNVkZYaC7Ejxec6EM/wVsj2DfxErweNSVxky5SZjYXAk12YCDwi40bhuaTDtimBRBcRYDGDY4IS9MtsUUDh6D0nHi7fxywJ5heiUovsYgDhieXE0c3llnY7eFlaB+4NmHYdy3IIY65DwBnoa8dtgu72DpsljVwmRt8TewHks47YCDYUMiUhOmHdx0wNFWVI0c68hIXNccZSnOG3Z9wAcHnPbzXRL3tnuBxw447/FZEtcLPWQd2DPUxjjpyl8bJhJKrSpFnsAx9Md4KX1NbFk7J5jAiFzXsSWCqh320kEYkmZs1VA/YVbqkY5FTrpDk9I3DNMQVp/5Ku21IyaaKi4iI231Udlki0L1+pC850QGSJEiRYoUKWiI/xp9l8K9IoPCAAAAAElFTkSuQmCC" alt="external-download-web-smashingstocks-glyph-smashing-stocks-3">
+                    </svg>
+                    <a href="../assets/CV_Valentin_Verscheure.pdf" download="CV_Valentin_Verscheure.pdf" class="hover:text-amber-400 transition-colors">Télécharger mon CV</a>
+                </div>
+
+                <!-- Formulaire de contact -->
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Votre nom"
+                            class="w-full px-4 py-3 bg-[#2a1615] rounded border border-amber-400/20 focus:border-amber-400 outline-none">
+                    </div>
+
+                    <div>
+                        <input type="email" placeholder="Votre email"
+                            class="w-full px-4 py-3 bg-[#2a1615] rounded border border-amber-400/20 focus:border-amber-400 outline-none">
+                    </div>
+
+                    <div>
+                        <textarea rows="5" placeholder="Votre message"
+                            class="w-full px-4 py-3 bg-[#2a1615] rounded border border-amber-400/20 focus:border-amber-400 outline-none"></textarea>
+                    </div>
+
+                    <button type="button" onclick="sendEmail()"
+                        class="w-full py-3 px-6 bg-amber-400 text-[#1B0B0A] font-semibold rounded hover:bg-amber-500 transition-colors">
+                        Envoyer le message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="../script/NavBar.js"></script>
+    <script src="../script/Contact.js"></script>
+</body>
+
+</html>
