@@ -1,10 +1,17 @@
+emailjs.init("l_ce7qtvjadGdWq3w");
+
 function sendEmail() {
-    const name = document.querySelector('input[type="text"]').value;
-    const email = document.querySelector('input[type="email"]').value;
-    const message = document.querySelector('textarea').value;
-    
-    const subject = encodeURIComponent("Contact depuis portfolio");
-    const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    
-    window.location.href = `mailto:valentin.59370@epitech.eu?subject=${subject}&body=${body}`;
+    const params = {
+        from_name: document.querySelector('[name="name"]').value,
+        reply_to: document.querySelector('[name="email"]').value,
+        message: document.querySelector('[name="message"]').value
+    };
+
+    emailjs.send("service_lmf8hyk", "template_cxqeb2u", params)
+        .then(() => {
+            alert("Message envoyé !");
+            document.getElementById("contactForm").reset();
+        }, (err) => {
+            alert("Erreur: " + JSON.stringify(err));
+        });
 }
