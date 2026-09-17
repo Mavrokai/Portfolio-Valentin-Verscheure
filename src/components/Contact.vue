@@ -23,6 +23,7 @@
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 stroke-linecap="round"
@@ -45,6 +46,7 @@
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 stroke-linecap="round"
@@ -54,7 +56,7 @@
               />
             </svg>
             <a
-              href="/assets/CV_2025-03-24_Valentin_Verscheure.pdf"
+              href="assets/CV_2025-03-24_Valentin%20_Verscheure%20.pdf"
               download="CV_Valentin_Verscheure.pdf"
               class="hover:text-amber-400 transition-colors text-sm"
             >
@@ -65,29 +67,37 @@
 
         <form @submit.prevent="handleSubmit" class="space-y-4">
           <div>
+            <label for="contact-name" class="sr-only">Votre nom</label>
             <input
+              id="contact-name"
               v-model="form.name"
               type="text"
               name="name"
               placeholder="Votre nom"
+              autocomplete="name"
               required
               class="w-full px-4 py-3 bg-portfolio-dark-alt/80 rounded-xl border border-amber-400/20 focus:border-amber-400 outline-none transition-all focus:scale-[1.01] focus:shadow-[0_0_25px_rgba(251,191,36,0.35)]"
             />
           </div>
 
           <div>
+            <label for="contact-email" class="sr-only">Votre email</label>
             <input
+              id="contact-email"
               v-model="form.email"
               type="email"
               name="email"
               placeholder="Votre email"
+              autocomplete="email"
               required
               class="w-full px-4 py-3 bg-portfolio-dark-alt/80 rounded-xl border border-amber-400/20 focus:border-amber-400 outline-none transition-all focus:scale-[1.01] focus:shadow-[0_0_25px_rgba(251,191,36,0.35)]"
             />
           </div>
 
           <div>
+            <label for="contact-message" class="sr-only">Votre message</label>
             <textarea
+              id="contact-message"
               v-model="form.message"
               name="message"
               rows="4"
@@ -97,11 +107,20 @@
             ></textarea>
           </div>
 
-          <div v-if="success" class="text-green-400 text-center text-sm">
+          <div
+            v-if="success"
+            class="text-center text-sm text-green-400"
+            role="status"
+            aria-live="polite"
+          >
             Message envoyé avec succès !
           </div>
 
-          <div v-if="error" class="text-red-400 text-center text-sm">
+          <div
+            v-if="error"
+            class="text-center text-sm text-red-400"
+            role="alert"
+          >
             {{ error }}
           </div>
 

@@ -2,6 +2,7 @@ import { onMounted, onUnmounted, nextTick } from 'vue'
 
 export function useAnimations() {
   let observer = null
+  let particleContainer = null
   const cleanupFunctions = []
 
   const setupScrollAnimations = () => {
@@ -36,7 +37,7 @@ export function useAnimations() {
 
   const createParticles = () => {
     nextTick(() => {
-      const particleContainer = document.createElement('div')
+      particleContainer = document.createElement('div')
       particleContainer.className = 'floating-particles'
       document.body.appendChild(particleContainer)
 
@@ -130,9 +131,15 @@ const setupSmoothScroll = () => {
   }
 
   onMounted(() => {
+    const prefersReducedMotion = window.matchMedia?.(
+      '(prefers-reduced-motion: reduce)'
+    ).matches
+
+    setupSmoothScroll()
+    if (prefersReducedMotion) return
+
     setupScrollAnimations()
     createParticles()
-    setupSmoothScroll()
     setupTextReveal()
     setupLogoHeartbeat()
     setupProfileParallax()
@@ -142,6 +149,7 @@ const setupSmoothScroll = () => {
     if (observer) {
       observer.disconnect()
     }
+    particleContainer?.remove()
     cleanupFunctions.forEach(cleanup => {
       if (typeof cleanup === 'function') cleanup()
     })

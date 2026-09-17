@@ -56,7 +56,7 @@
           <span class="relative">Voir mes projets</span>
         </button>
         <a
-          href="/assets/CV_2025-03-24_Valentin_Verscheure.pdf"
+          href="assets/CV_2025-03-24_Valentin%20_Verscheure%20.pdf"
           download="CV_Valentin_Verscheure.pdf"
           class="inline-flex items-center justify-center gap-2 rounded-full border border-amber-400/40 bg-black/30 px-6 py-3 text-sm font-medium text-amber-200 hover:bg-amber-400/10 hover:border-amber-300 transition-all"
         >
@@ -86,8 +86,10 @@
             class="absolute inset-x-10 -top-6 mx-auto h-10 rounded-full bg-gradient-to-r from-amber-400/20 via-fuchsia-400/10 to-sky-400/20 blur-2xl"
           />
           <img
-            src="/assets/Valentin.webp"
+            :src="profileImage"
             alt="Photo de Valentin Verscheure"
+            width="549"
+            height="822"
             class="relative z-10 rounded-3xl w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-amber-400/60 animate-float"
           />
           <div class="mt-6 space-y-2 text-base md:text-lg">
@@ -107,6 +109,8 @@
 </template>
 
 <script setup>
+const profileImage = 'assets/Valentin.webp'
+
 const scrollToProjects = () => {
   const target = document.getElementById('projets')
   if (target) {

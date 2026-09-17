@@ -36,9 +36,12 @@
     </div>
 
     <button
+      type="button"
       @click="toggleMobileMenu"
       class="md:hidden p-2 rounded-xl border border-amber-400/30 bg-black/40 text-amber-200 shadow-[0_0_20px_rgba(251,191,36,0.3)]"
       aria-label="Menu mobile"
+      aria-controls="mobile-navigation"
+      :aria-expanded="isMobileMenuOpen"
     >
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
@@ -52,8 +55,9 @@
   </nav>
 
   <div
+    id="mobile-navigation"
     v-show="isMobileMenuOpen"
-    class="md:hidden fixed top-20 w-full bg-portfolio-dark/95 backdrop-blur-xl border-b border-amber-400/10 animate-fade-in-down"
+    class="fixed top-20 z-40 w-full border-b border-amber-400/10 bg-portfolio-dark/95 backdrop-blur-xl animate-fade-in-down md:hidden"
   >
     <div class="flex flex-col p-4 gap-4 border-t border-amber-400/20">
       <a
@@ -80,7 +84,8 @@ const links = [
   { id: 2, href: '#apropos', label: 'À propos' },
   { id: 3, href: '#competences', label: 'Compétences' },
   { id: 4, href: '#projets', label: 'Projets' },
-  { id: 5, href: '#contact', label: 'Contact' }
+  { id: 5, href: '#progression', label: 'Progression' },
+  { id: 6, href: '#contact', label: 'Contact' }
 ]
 
 const toggleMobileMenu = () => {

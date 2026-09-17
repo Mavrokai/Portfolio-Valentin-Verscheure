@@ -7,12 +7,12 @@
         </p>
         <h2 class="text-3xl md:text-4xl font-bold mb-3 animate-on-scroll animate-fade-in-down">
           Un socle technique
-          <span class="text-amber-300">solide</span>
+          <span class="text-amber-300">en évolution</span>
         </h2>
         <p class="max-w-2xl mx-auto text-sm md:text-base text-gray-300/90">
-          Des compétences couvrant tout le cycle de vie d&apos;une application :
-          front-end, back-end, bases de données, outils DevOps et écosystème
-          Odoo pour les SI des organisations.
+          Ces technologies ont été mobilisées en formation, dans mes projets
+          personnels ou en alternance. Les analyses de réalisations précisent
+          les preuves disponibles et les axes que je continue à approfondir.
         </p>
       </div>
 

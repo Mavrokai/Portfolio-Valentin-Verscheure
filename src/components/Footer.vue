@@ -31,7 +31,7 @@
 
         <div class="flex items-center gap-2">
           <a
-            href="https://github.com/valentinverscheure"
+            href="https://github.com/Mavrokai"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
