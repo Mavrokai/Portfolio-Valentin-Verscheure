@@ -21,6 +21,43 @@ describe('accessibilité et liens essentiels', () => {
     )
   })
 
+  it('affiche les trois moyens de contact dans la carte de profil', () => {
+    const wrapper = mount(Hero)
+    const contactLinks = wrapper.findAll('[data-hero-contact]')
+
+    expect(contactLinks.map((link) => link.attributes('href'))).toEqual([
+      'mailto:valentin.verscheure@epitech.eu',
+      'https://www.linkedin.com/in/valentin-verscheure',
+      'https://github.com/Mavrokai'
+    ])
+    expect(contactLinks.map((link) => link.text())).toEqual([
+      'Email',
+      'LinkedIn',
+      'GitHub'
+    ])
+  })
+
+  it('place un portrait compact avant le texte sur mobile', () => {
+    const wrapper = mount(Hero)
+    const section = wrapper.get('section#accueil')
+    const profileCard = wrapper.get('[data-profile-card]')
+    const portrait = profileCard.get('img')
+    const title = wrapper.get('h1')
+
+    expect(section.classes()).toEqual(
+      expect.arrayContaining(['py-10', 'md:py-24', 'gap-8', 'md:gap-12'])
+    )
+    expect(profileCard.classes()).toEqual(
+      expect.arrayContaining(['order-first', 'md:order-none'])
+    )
+    expect(portrait.classes()).toEqual(
+      expect.arrayContaining(['w-32', 'h-32', 'md:w-80', 'md:h-80'])
+    )
+    expect(title.classes()).toEqual(
+      expect.arrayContaining(['text-3xl', 'md:text-6xl'])
+    )
+  })
+
   it('associe un libellé explicite à chaque champ de contact', () => {
     const wrapper = mount(Contact)
 
