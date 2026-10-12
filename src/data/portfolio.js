@@ -42,8 +42,8 @@ export const portfolioProfile = {
       key: 'cadrer',
       number: '01',
       level: 'En progression',
-      summary: 'Je sais analyser un besoin, préparer une maquette et modéliser une solution. Je dois encore approfondir la formalisation complète des cahiers des charges et l’argumentation des choix.',
-      evidence: ['Maquette Responsive', 'My Cinema', 'My Twitter']
+      summary: 'Je sais analyser un besoin, préparer une maquette, formaliser des spécifications et argumenter les choix techniques sur des réalisations concrètes.',
+      evidence: ['Maquette Responsive', 'PiePHP', 'Microservices', 'My Cinema', 'My Twitter']
     },
     {
       key: 'developper',
@@ -56,19 +56,11 @@ export const portfolioProfile = {
       key: 'qualite',
       number: '03',
       level: 'En progression',
-      summary: 'J’intègre l’ergonomie, le responsive et les premiers contrôles qualité dans mes réalisations. La documentation utilisateur, le suivi des retours et l’argumentation des corrections restent mes principaux axes de progression.',
-      evidence: ['Maquette - Introduction', 'Maquette Responsive', 'My Spotify', 'My Restaurant', 'My CRUD Tester']
+      summary: 'J’intègre documentation, audits d’ergonomie, suivi de lancement et propositions d’amélioration dans mes réalisations déployées et documentées.',
+      evidence: ['Maquette Responsive', 'E-commerce Symfony', 'Mass Protocol', 'My Restaurant', 'My CRUD Tester']
     }
   ],
-  gaps: [
-    { key: 'cadrer.cdc', title: 'Cahier des charges', action: 'Ajouter un cahier des charges daté et relié à une réalisation.' },
-    { key: 'cadrer.specs', title: 'Spécifications techniques', action: 'Publier les choix d’architecture, contraintes et critères d’acceptation d’un projet.' },
-    { key: 'cadrer.presentation', title: 'Présentation argumentée', action: 'Joindre une présentation qui justifie les maquettes et les choix techniques.' },
-    { key: 'qualite.doc_utilisateur', title: 'Documentation utilisateur', action: 'Ajouter un guide court couvrant les principaux parcours.' },
-    { key: 'qualite.monitor', title: 'Suivi du lancement', action: 'Présenter des retours utilisateurs recueillis après une mise en ligne.' },
-    { key: 'qualite.amelioration', title: 'Analyse d’améliorations', action: 'Comparer des mesures avant et après une amélioration vérifiable.' },
-    { key: 'qualite.argumentatif', title: 'Préconisations argumentées', action: 'Joindre un document qui priorise et justifie des corrections.' }
-  ]
+  gaps: []
 }
 
 export const projects = [
@@ -173,9 +165,9 @@ export const projects = [
       { label: 'Aperçu responsive', href: 'assets/MaquetteResponsive.png' }
     ],
     rncpKeys: {
-      cadrer: ['maquette'],
+      cadrer: ['maquette', 'cdc', 'presentation'],
       developper: ['integration', 'frontend'],
-      qualite: ['ergonomie']
+      qualite: ['ergonomie', 'argumentatif']
     }
   },
   {
@@ -315,7 +307,7 @@ export const projects = [
   },
   {
     title: 'PiePHP',
-    image: 'assets/projects/piephp.svg',
+    image: 'assets/projects/piephp.png',
     repository: 'https://github.com/Mavrokai/PiePHP',
     tags: ['PHP', 'MVC', 'Framework'],
     description: 'Mini-framework PHP MVC maison (routing, contrôleurs, vues, webroot).',
@@ -331,13 +323,13 @@ export const projects = [
       { label: 'Code source', href: 'https://github.com/Mavrokai/PiePHP' }
     ],
     rncpKeys: {
-      cadrer: ['environnement', 'modele'],
+      cadrer: ['environnement', 'modele', 'specs'],
       developper: ['prototype', 'backend', 'code']
     }
   },
   {
     title: 'FreeAds',
-    image: 'assets/projects/freeads.svg',
+    image: 'assets/projects/freeads.png',
     repository: 'https://github.com/Mavrokai/FreeAds',
     tags: ['Laravel', 'PHP', 'Blade'],
     description: 'Site d’annonces classées développé avec Laravel (auth, CRUD, vues Blade).',
@@ -358,7 +350,7 @@ export const projects = [
   },
   {
     title: 'PushSwap',
-    image: 'assets/projects/pushswap.svg',
+    image: 'assets/projects/pushswap.png',
     repository: 'https://github.com/Mavrokai/PushSwap',
     tags: ['PHP', 'Algorithmes', 'Tri'],
     description: 'Implémentation PHP de Push Swap : tri d’une pile avec un jeu d’instructions limité.',
@@ -379,7 +371,7 @@ export const projects = [
   },
   {
     title: 'My Snapchat',
-    image: 'assets/projects/my-snapchat.svg',
+    image: 'assets/projects/my-snapchat.png',
     repository: 'https://github.com/Mavrokai/My_SnapChat',
     tags: ['React Native', 'Expo', 'TypeScript'],
     description: 'Application mobile d’envoi de photos éphémères inspirée de Snapchat.',
@@ -400,7 +392,7 @@ export const projects = [
   },
   {
     title: 'My Quiz',
-    image: 'assets/projects/my-quiz.svg',
+    image: 'assets/projects/my-quiz.png',
     repository: 'https://github.com/Mavrokai/My_Quiz',
     tags: ['PHP', 'MVC', 'Twig'],
     description: 'Application de quiz en architecture MVC PHP avec templates Twig et base SQL.',
@@ -422,7 +414,7 @@ export const projects = [
   },
   {
     title: 'BSQ',
-    image: 'assets/projects/bsq.svg',
+    image: 'assets/projects/bsq.png',
     repository: 'https://github.com/Mavrokai/BSQ',
     tags: ['PHP', 'Algorithmes'],
     description: 'Algorithme BSQ (Biggest Square) en PHP avec générateur de cartes.',
@@ -510,7 +502,7 @@ export const projects = [
   },
   {
     title: 'EvalExpr',
-    image: 'assets/projects/evalexpr.svg',
+    image: 'assets/projects/evalexpr.png',
     repository: 'https://github.com/Mavrokai/EvaleXPR',
     tags: ['PHP', 'Parseur'],
     description: 'Évaluateur d’expressions mathématiques en PHP.',
@@ -531,7 +523,7 @@ export const projects = [
   },
   {
     title: 'E-commerce Java',
-    image: 'assets/projects/ecommerce-java.svg',
+    image: 'assets/projects/ecommerce-java.png',
     repository: 'https://github.com/Mavrokai/Ecommerce',
     tags: ['Java', 'Spring Boot', 'Équipe'],
     description: 'Projet e-commerce Java en équipe (Spring Boot, PostgreSQL).',
@@ -577,7 +569,7 @@ export const projects = [
   },
   {
     title: 'My CRUD Tester',
-    image: 'assets/projects/mycrudtester.svg',
+    image: 'assets/projects/mycrudtester.png',
     repository: 'https://github.com/Mavrokai/mycrudtester',
     tags: ['Node.js', 'MongoDB', 'JWT', 'Tests'],
     description: 'API REST utilisateurs avec JWT, 187 tests Jasmine et collection Postman.',
@@ -600,7 +592,7 @@ export const projects = [
   },
   {
     title: 'Kiloupabocou',
-    image: 'assets/projects/kiloupabocou.svg',
+    image: 'assets/projects/kiloupabocou.png',
     repository: 'https://github.com/Mavrokai/kiloupabocou',
     tags: ['Docker', 'ELK', 'Symfony'],
     description: 'Infrastructure Docker Symfony + stack ELK pour centraliser et visualiser les logs.',
@@ -623,7 +615,7 @@ export const projects = [
   },
   {
     title: 'Microservices',
-    image: 'assets/projects/microservices.svg',
+    image: 'assets/projects/microservices.png',
     repository: 'https://github.com/Mavrokai/microservices',
     tags: ['PHP Slim', 'Express', 'MongoDB'],
     description: 'Deux APIs microservices : utilisateurs/messages (Slim/MySQL) et discussions (Express/MongoDB).',
@@ -664,7 +656,7 @@ export const projects = [
     ],
     rncpKeys: {
       developper: ['backend', 'frontend', 'integration'],
-      qualite: ['ergonomie', 'doc_technique']
+      qualite: ['ergonomie', 'doc_technique', 'amelioration']
     },
     ergonomicAudit: {
       strengths: [
@@ -707,7 +699,7 @@ export const projects = [
   },
   {
     title: 'Mediaval RPG',
-    image: 'assets/projects/ruby-rpg.svg',
+    image: 'assets/projects/ruby-rpg.png',
     repository: 'https://github.com/Mavrokai/ruby',
     tags: ['Ruby on Rails', 'SQLite', 'RPG'],
     description: 'Jeu web RPG médiéval : quêtes, combats au tour par tour, PNJ et progression.',
@@ -730,7 +722,7 @@ export const projects = [
   },
   {
     title: 'My Restaurant',
-    image: 'assets/projects/java-restaurant.svg',
+    image: 'assets/projects/java-restaurant.png',
     repository: 'https://github.com/Mavrokai/java',
     tags: ['Java', 'Spring Boot', 'Thymeleaf'],
     description: 'Back-office et site public pour restaurateurs (carte, menus, allergènes, avis).',
@@ -748,12 +740,12 @@ export const projects = [
     rncpKeys: {
       cadrer: ['modele'],
       developper: ['backend', 'frontend', 'auth', 'code'],
-      qualite: ['doc_technique']
+      qualite: ['doc_technique', 'doc_utilisateur']
     }
   },
   {
     title: 'WebtoonReader',
-    image: 'assets/projects/webtoon-reader.svg',
+    image: 'assets/projects/webtoon-reader.png',
     repository: 'https://github.com/Mavrokai/app',
     tags: ['React Native', 'Expo', 'MangaDex'],
     description: 'App mobile de lecture de webtoons/manhwa avec API MangaDex et capteurs téléphone.',
@@ -797,7 +789,7 @@ export const projects = [
   },
   {
     title: 'My Go',
-    image: 'assets/projects/mygo.svg',
+    image: 'assets/projects/mygo.png',
     repository: 'https://github.com/Mavrokai/mygo',
     tags: ['Documentation'],
     description: 'Dépôt de documentation / supports liés au parcours My Go.',
@@ -836,7 +828,8 @@ export const projects = [
       { label: 'Capture connexion', href: 'assets/projects/muscccs.png' }
     ],
     rncpKeys: {
-      developper: ['frontend', 'backend', 'auth', 'deploy', 'integration']
+      developper: ['frontend', 'backend', 'auth', 'deploy', 'integration'],
+      qualite: ['monitor', 'doc_utilisateur']
     }
   }
 ]

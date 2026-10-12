@@ -61,7 +61,10 @@
         </article>
       </div>
 
-      <aside class="mt-10 rounded-2xl border border-amber-400/20 bg-black/30 p-6">
+      <aside
+        v-if="portfolioProfile.gaps.length"
+        class="mt-10 rounded-2xl border border-amber-400/20 bg-black/30 p-6"
+      >
         <div class="mb-5 max-w-3xl">
           <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
             Preuves à compléter
