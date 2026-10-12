@@ -15,7 +15,7 @@
         <p class="mx-auto max-w-3xl text-sm text-gray-300/90 md:text-base">
           Développement : autonome. Cadrage et qualité : en progression.
           Cette auto-évaluation relie mes réalisations aux acquis déjà
-          mobilisés et aux efforts nécessaires pour atteindre le niveau suivant.
+          mobilisés sur les blocs du titre.
         </p>
       </div>
 
@@ -60,40 +60,6 @@
           </div>
         </article>
       </div>
-
-      <aside
-        v-if="portfolioProfile.gaps.length"
-        class="mt-10 rounded-2xl border border-amber-400/20 bg-black/30 p-6"
-      >
-        <div class="mb-5 max-w-3xl">
-          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
-            Preuves à compléter
-          </p>
-          <h3 class="text-xl font-semibold text-gray-100">
-            Compétences encore insuffisamment documentées
-          </h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-300/90">
-            Ces compétences font partie du titre, mais les dépôts actuellement
-            publics ne contiennent pas encore de livrable permettant de les
-            démontrer directement. Elles constituent ma feuille de route.
-          </p>
-        </div>
-
-        <ul class="grid gap-3 md:grid-cols-2">
-          <li
-            v-for="gap in portfolioProfile.gaps"
-            :key="gap.key"
-            class="rounded-xl border border-amber-400/10 bg-portfolio-dark-alt/60 p-4"
-          >
-            <p class="text-sm font-semibold text-amber-200">
-              {{ gap.title }}
-            </p>
-            <p class="mt-1 text-xs leading-relaxed text-gray-400">
-              {{ gap.action }}
-            </p>
-          </li>
-        </ul>
-      </aside>
     </div>
   </section>
 </template>

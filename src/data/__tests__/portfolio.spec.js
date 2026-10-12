@@ -30,7 +30,7 @@ describe('contenu pédagogique du portfolio', () => {
     }
   })
 
-  it('identifie explicitement chaque compétence sans preuve directe', () => {
+  it('couvre l’ensemble des acquis du titre RNCP via les projets', () => {
     const covered = new Set(
       projects.flatMap((project) =>
         Object.entries(project.rncpKeys).flatMap(([blockKey, keys]) =>
@@ -44,9 +44,9 @@ describe('contenu pédagogique du portfolio', () => {
     )
 
     const uncovered = expected.filter((key) => !covered.has(key)).sort()
-    const declaredGaps = portfolioProfile.gaps.map((gap) => gap.key).sort()
 
-    expect(declaredGaps).toEqual(uncovered)
+    expect(portfolioProfile.gaps).toBeUndefined()
+    expect(uncovered).toEqual([])
   })
 
   it('présente une auto-évaluation fidèle au niveau déclaré', () => {

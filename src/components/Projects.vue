@@ -194,7 +194,7 @@
 
               <div>
                 <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300/90">
-                  Compétences RNCP associées
+                  Acquis RNCP
                 </p>
                 <ul class="space-y-3 text-sm text-gray-300/95">
                   <li

@@ -2,36 +2,36 @@ export const rncpBlocks = {
   cadrer: {
     title: 'Cadrer un projet et conceptualiser une solution web',
     items: {
-      cdc: 'Rédiger un cahier des charges à partir d’une expression de besoins, dans le respect des réglementations applicables, notamment le RGPD.',
-      specs: 'Rédiger des spécifications techniques à partir du cahier des charges afin de cadrer techniquement le développement.',
-      environnement: 'Déployer un environnement de travail avec les outils de versionnage, de partage et de collaboration nécessaires.',
-      maquette: 'Réaliser une maquette respectant les bonnes pratiques d’ergonomie et d’accessibilité afin de faire valider la structure.',
-      modele: 'Modéliser les fonctionnalités, leurs interactions, l’architecture de la solution et sa base de données.',
-      presentation: 'Présenter et argumenter les choix techniques, les maquettes et le schéma de la solution.'
+      cdc: 'Rédiger un cahier des charges en partant d’une expression de besoins, afin de cadrer fonctionnellement un projet de solution web dans le respect des réglementations en vigueur et notamment le RGPD.',
+      specs: 'Rédiger des spécifications techniques en analysant un CDC, afin de cadrer techniquement un projet de développement de solution web.',
+      environnement: 'Déployer un environnement de travail en mettant en place les outils de versionnage, de partage et de collaboration/communication nécessaires.',
+      maquette: 'Réaliser une maquette afin de permettre au client de valider la structure de la solution web en respectant les bonnes pratiques d’ergonomie et d’accessibilité.',
+      modele: 'Identifier les fonctionnalités à développer, en modélisant les divers éléments et leurs interconnexions, afin de structurer l’architecture de la solution web et de sa base de données.',
+      presentation: 'Rédiger une présentation pour présenter les choix techniques, les maquettes et le schéma de la solution web en argumentant les choix faits.'
     }
   },
   developper: {
     title: 'Développer une solution web',
     items: {
-      prototype: 'Développer un prototype afin de présenter l’architecture technique de la solution.',
-      code: 'Transcrire les fonctionnalités attendues dans un code respectant accessibilité, ergonomie, référencement et réglementation.',
-      integration: 'Intégrer les éléments de la solution conformément aux maquettes et aux normes récentes des langages utilisés.',
+      prototype: 'Développer le prototype de la solution web afin de présenter l’architecture technique au client.',
+      code: 'Rédiger le code de la solution en transcrivant les fonctionnalités du CDC, en respectant les normes d’accessibilité, d’ergonomie, de référencement et la réglementation en vigueur.',
+      integration: 'Intégrer les différents éléments de la solution web en fonction des maquettes, en respectant les dernières normes des langages utilisés (HTML, CSS, JS…).',
       frontend: 'Implémenter la partie front-end d’une solution web.',
-      backend: 'Implémenter la logique serveur et la persistance des données.',
-      auth: 'Implémenter des règles d’authentification conformes aux bonnes pratiques de sécurité.',
-      tests: 'Concevoir et exécuter des tests unitaires et d’intégration pour vérifier les fonctionnalités.',
-      deploy: 'Déployer une application sur un serveur afin de la rendre accessible aux utilisateurs.'
+      backend: 'Implémenter la logique et la base de données assurant la persistance des données côté serveur (back-end).',
+      auth: 'Implémenter des règles d’authentification, en respectant les bonnes pratiques en matière de sécurité, afin de sécuriser l’accès à une solution web.',
+      tests: 'Implémenter un plan de tests en concevant les différents tests unitaires et d’intégration afin de vérifier que l’ensemble des fonctionnalités développées fonctionne bien séparément et à l’unisson.',
+      deploy: 'Déployer une application web en utilisant un serveur afin de rendre l’application accessible aux utilisateurs.'
     }
   },
   qualite: {
-    title: 'Déployer un système d’assurance qualité',
+    title: 'Déployer un système d’assurance qualité tout au long du cycle de vie d’une solution web',
     items: {
-      doc_technique: 'Rédiger une documentation technique et fonctionnelle pour faciliter la maintenance et les évolutions.',
-      doc_utilisateur: 'Rédiger une documentation utilisateur favorisant l’autonomie et la satisfaction.',
-      monitor: 'Recueillir les retours utilisateurs lors du lancement afin d’évaluer la qualité de la solution.',
-      amelioration: 'Analyser les retours et les données disponibles pour identifier des améliorations qualitatives et de performance.',
-      ergonomie: 'Analyser l’ergonomie, l’accessibilité, la navigation et le référencement afin d’identifier les axes d’amélioration.',
-      argumentatif: 'Formaliser et argumenter des propositions d’amélioration pour faire valider des corrections.'
+      doc_technique: 'Rédiger une documentation technique à destination des équipes parties prenantes en réalisant la documentation technique et fonctionnelle de la solution web.',
+      doc_utilisateur: 'Rédiger une documentation utilisateur pour apporter un support aux utilisateurs, afin de garantir leur autonomie et leur satisfaction.',
+      monitor: 'Monitorer le lancement d’une solution web, en recueillant les retours utilisateurs, afin d’évaluer la qualité de la solution web déployée.',
+      amelioration: 'Identifier des améliorations qualitatives et de performance d’une solution web, en analysant les retours utilisateurs et les données d’analyse du trafic.',
+      ergonomie: 'Analyser la qualité de l’ergonomie et la qualité de l’accessibilité de la solution (normes, design, navigation, référencement, bonnes pratiques) pour identifier les axes d’amélioration.',
+      argumentatif: 'Rédiger un document argumentatif en listant des propositions d’améliorations afin de faire valider des préconisations de développements correctifs.'
     }
   }
 }
@@ -59,8 +59,7 @@ export const portfolioProfile = {
       summary: 'J’intègre documentation, audits d’ergonomie, suivi de lancement et propositions d’amélioration dans mes réalisations déployées et documentées.',
       evidence: ['Maquette Responsive', 'E-commerce Symfony', 'Mass Protocol', 'My Restaurant', 'My CRUD Tester']
     }
-  ],
-  gaps: []
+  ]
 }
 
 export const projects = [
@@ -279,8 +278,23 @@ export const projects = [
       { label: 'Code source', href: 'https://github.com/Mavrokai/frameworkcss' },
       { label: 'Capture de la démo', href: 'assets/projects/frameworkcss.png' }
     ],
+    ergonomicAudit: {
+      strengths: [
+        'La grille et les utilitaires de masquage facilitent une structure responsive cohérente.',
+        'Les composants (boutons, navbar, onglets) partagent un langage visuel homogène.'
+      ],
+      risks: [
+        'Les contrastes et l’accessibilité clavier ne sont pas encore audités systématiquement.',
+        'La documentation des classes n’est pas encore exposée aux utilisateurs finaux.'
+      ],
+      actions: [
+        'Publier un guide des classes et un audit Lighthouse de la page de démo.',
+        'Vérifier le focus clavier sur popin, onglets et navbar.'
+      ]
+    },
     rncpKeys: {
-      developper: ['integration', 'frontend', 'prototype']
+      developper: ['prototype', 'integration', 'frontend', 'code'],
+      qualite: ['ergonomie']
     }
   },
   {
@@ -345,7 +359,8 @@ export const projects = [
       { label: 'Code source', href: 'https://github.com/Mavrokai/FreeAds' }
     ],
     rncpKeys: {
-      developper: ['backend', 'frontend', 'auth', 'code']
+      cadrer: ['modele', 'environnement'],
+      developper: ['backend', 'frontend', 'auth', 'code', 'integration']
     }
   },
   {
@@ -409,7 +424,7 @@ export const projects = [
     ],
     rncpKeys: {
       cadrer: ['modele'],
-      developper: ['backend', 'frontend', 'code']
+      developper: ['backend', 'frontend', 'auth', 'code', 'integration']
     }
   },
   {
@@ -452,7 +467,8 @@ export const projects = [
       { label: 'Capture de l’explorateur', href: 'assets/projects/h5ai.png' }
     ],
     rncpKeys: {
-      developper: ['backend', 'frontend', 'integration', 'code']
+      developper: ['backend', 'frontend', 'integration', 'code'],
+      qualite: ['doc_utilisateur']
     }
   },
   {
@@ -474,6 +490,7 @@ export const projects = [
       { label: 'Capture du chat', href: 'assets/projects/irc.png' }
     ],
     rncpKeys: {
+      cadrer: ['environnement'],
       developper: ['backend', 'frontend', 'integration', 'code']
     }
   },
@@ -496,8 +513,8 @@ export const projects = [
       { label: 'Capture du client', href: 'assets/projects/cms-events.png' }
     ],
     rncpKeys: {
-      cadrer: ['environnement'],
-      developper: ['frontend', 'integration', 'backend']
+      cadrer: ['environnement', 'modele'],
+      developper: ['frontend', 'integration', 'backend', 'code']
     }
   },
   {
@@ -540,7 +557,7 @@ export const projects = [
       { label: 'Guide d’installation', href: 'https://github.com/Mavrokai/Ecommerce/blob/main/Installation.md' }
     ],
     rncpKeys: {
-      cadrer: ['environnement'],
+      cadrer: ['environnement', 'specs'],
       developper: ['backend', 'code'],
       qualite: ['doc_technique']
     }
@@ -564,7 +581,8 @@ export const projects = [
       { label: 'Capture de l’app', href: 'assets/projects/previously.png' }
     ],
     rncpKeys: {
-      developper: ['frontend', 'integration', 'code']
+      cadrer: ['environnement'],
+      developper: ['frontend', 'integration', 'code', 'auth']
     }
   },
   {
@@ -609,8 +627,8 @@ export const projects = [
     ],
     rncpKeys: {
       cadrer: ['environnement'],
-      developper: ['deploy'],
-      qualite: ['doc_technique']
+      developper: ['deploy', 'backend'],
+      qualite: ['doc_technique', 'monitor']
     }
   },
   {
@@ -631,8 +649,8 @@ export const projects = [
       { label: 'Code source', href: 'https://github.com/Mavrokai/microservices' }
     ],
     rncpKeys: {
-      cadrer: ['environnement', 'modele'],
-      developper: ['backend', 'code'],
+      cadrer: ['environnement', 'modele', 'specs'],
+      developper: ['backend', 'code', 'prototype'],
       qualite: ['doc_technique']
     }
   },
@@ -655,7 +673,8 @@ export const projects = [
       { label: 'Capture boutique', href: 'assets/projects/ecommerce-optimisation.png' }
     ],
     rncpKeys: {
-      developper: ['backend', 'frontend', 'integration'],
+      cadrer: ['environnement'],
+      developper: ['backend', 'frontend', 'integration', 'code'],
       qualite: ['ergonomie', 'doc_technique', 'amelioration']
     },
     ergonomicAudit: {
@@ -692,8 +711,8 @@ export const projects = [
       { label: 'Capture', href: 'assets/projects/devresp.png' }
     ],
     rncpKeys: {
-      cadrer: ['environnement'],
-      developper: ['backend', 'frontend'],
+      cadrer: ['environnement', 'specs'],
+      developper: ['backend', 'frontend', 'code'],
       qualite: ['doc_technique']
     }
   },
@@ -716,7 +735,7 @@ export const projects = [
     ],
     rncpKeys: {
       cadrer: ['modele', 'environnement'],
-      developper: ['backend', 'frontend', 'code'],
+      developper: ['backend', 'frontend', 'code', 'auth'],
       qualite: ['doc_technique']
     }
   },
@@ -738,8 +757,8 @@ export const projects = [
       { label: 'Code source', href: 'https://github.com/Mavrokai/java' }
     ],
     rncpKeys: {
-      cadrer: ['modele'],
-      developper: ['backend', 'frontend', 'auth', 'code'],
+      cadrer: ['modele', 'environnement'],
+      developper: ['backend', 'frontend', 'auth', 'code', 'integration'],
       qualite: ['doc_technique', 'doc_utilisateur']
     }
   },
@@ -783,8 +802,8 @@ export const projects = [
       { label: 'Asset HUD', href: 'assets/projects/gaming.png' }
     ],
     rncpKeys: {
-      cadrer: ['maquette'],
-      developper: ['frontend']
+      cadrer: ['maquette', 'presentation'],
+      developper: ['frontend', 'prototype']
     }
   },
   {
@@ -805,7 +824,7 @@ export const projects = [
       { label: 'Dépôt', href: 'https://github.com/Mavrokai/mygo' }
     ],
     rncpKeys: {
-      qualite: ['doc_technique']
+      qualite: ['doc_technique', 'doc_utilisateur']
     }
   },
   {
@@ -828,7 +847,7 @@ export const projects = [
       { label: 'Capture connexion', href: 'assets/projects/muscccs.png' }
     ],
     rncpKeys: {
-      developper: ['frontend', 'backend', 'auth', 'deploy', 'integration'],
+      developper: ['frontend', 'backend', 'auth', 'deploy', 'integration', 'code'],
       qualite: ['monitor', 'doc_utilisateur']
     }
   }
