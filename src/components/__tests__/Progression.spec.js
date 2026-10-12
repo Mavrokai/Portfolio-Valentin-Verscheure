@@ -11,6 +11,6 @@ describe('Progression', () => {
     expect(wrapper.findAll('article')).toHaveLength(3)
     expect(wrapper.text()).toContain('Développement : autonome')
     expect(wrapper.text()).toContain('Cadrage et qualité : en progression')
-    expect(wrapper.text()).toContain('Prochaine étape')
+    expect(wrapper.text()).not.toContain('Prochaine étape')
   })
 })

@@ -58,15 +58,6 @@
               </span>
             </div>
           </div>
-
-          <div class="mt-auto pt-6">
-            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300/90">
-              Prochaine étape
-            </p>
-            <p class="text-sm leading-relaxed text-gray-300/95">
-              {{ item.nextStep }}
-            </p>
-          </div>
         </article>
       </div>
 
