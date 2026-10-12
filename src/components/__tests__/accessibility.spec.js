@@ -45,13 +45,13 @@ describe('accessibilité et liens essentiels', () => {
     const title = wrapper.get('h1')
 
     expect(section.classes()).toEqual(
-      expect.arrayContaining(['py-10', 'md:py-24', 'gap-8', 'md:gap-12'])
+      expect.arrayContaining(['py-8', 'md:py-24', 'gap-6', 'md:gap-12', 'justify-start', 'md:justify-center'])
     )
     expect(profileCard.classes()).toEqual(
       expect.arrayContaining(['order-first', 'md:order-none'])
     )
     expect(portrait.classes()).toEqual(
-      expect.arrayContaining(['w-32', 'h-32', 'md:w-80', 'md:h-80'])
+      expect.arrayContaining(['w-28', 'h-28', 'md:w-80', 'md:h-80'])
     )
     expect(title.classes()).toEqual(
       expect.arrayContaining(['text-3xl', 'md:text-6xl'])

@@ -118,10 +118,15 @@ const setupSmoothScroll = () => {
       if (!profileImg) return
 
       const handleMouseMove = (e) => {
+        if (window.matchMedia('(max-width: 767px)').matches) {
+          profileImg.style.transform = ''
+          return
+        }
+
         const rect = profileImg.getBoundingClientRect()
         const x = e.clientX - rect.left - rect.width / 2
         const y = e.clientY - rect.top - rect.height / 2
-        
+
         profileImg.style.transform = `translate(${x * 0.02}px, ${y * 0.02}px)`
       }
 
