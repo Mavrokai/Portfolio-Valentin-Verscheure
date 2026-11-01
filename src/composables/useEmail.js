@@ -2,7 +2,7 @@ import { ref } from 'vue'
 import emailjs from '@emailjs/browser'
 
 const SERVICE_ID = 'service_n61vxrf'
-const TEMPLATE_ID = 'template_cxqeb2u'
+const TEMPLATE_ID = 'template_l84cbzf'
 const PUBLIC_KEY = 'LjDX-Ppqsw11gIMpa'
 
 export function useEmail() {
@@ -16,16 +16,18 @@ export function useEmail() {
     success.value = false
 
     try {
-      // Aliases couvrant les noms de variables les plus courants côté EmailJS
+      // Variables attendues par le template EmailJS "Contact Us"
       const params = {
+        title: `Message de ${formData.name}`,
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        // Alias de compatibilité
         from_name: formData.name,
         user_name: formData.name,
-        name: formData.name,
         reply_to: formData.email,
         from_email: formData.email,
-        user_email: formData.email,
-        email: formData.email,
-        message: formData.message
+        user_email: formData.email
       }
 
       await emailjs.send(SERVICE_ID, TEMPLATE_ID, params, {
