@@ -1,7 +1,7 @@
 <template>
-  <section id="contact" class="bg-portfolio-dark px-4 py-24 md:px-20">
-    <div class="mx-auto max-w-3xl">
-      <div class="mb-10 text-center">
+  <section id="contact" class="bg-portfolio-dark px-4 py-16 md:px-20 md:py-24">
+    <div class="mx-auto max-w-2xl">
+      <div class="mb-8 text-center">
         <p class="mb-3 text-xs uppercase tracking-[0.35em] text-amber-300/80">
           Me contacter
         </p>
@@ -15,11 +15,11 @@
         </p>
       </div>
 
-      <div class="rounded-3xl border border-amber-400/15 bg-gradient-to-b from-black/40 to-portfolio-dark-alt/80 p-6 shadow-[0_18px_55px_rgba(0,0,0,0.85)] md:p-8">
-        <div class="mb-6 flex flex-wrap items-center justify-center gap-3 border-b border-amber-400/10 pb-6 sm:justify-start">
+      <div class="rounded-3xl border border-amber-400/15 bg-gradient-to-b from-black/40 to-portfolio-dark-alt/80 p-5 shadow-[0_18px_55px_rgba(0,0,0,0.85)] md:p-7">
+        <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
           <a
             href="mailto:valentin.verscheure@epitech.eu"
-            class="inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-black/25 px-3 py-2 text-sm text-amber-100 transition hover:border-amber-300 hover:bg-amber-400/10"
+            class="inline-flex min-w-0 items-center gap-2 rounded-full border border-amber-400/25 bg-black/25 px-3 py-2 text-sm text-amber-100 transition hover:border-amber-300 hover:bg-amber-400/10"
           >
             <svg
               class="h-4 w-4 shrink-0 text-amber-400"
@@ -35,7 +35,7 @@
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
-            valentin.verscheure@epitech.eu
+            <span class="truncate">valentin.verscheure@epitech.eu</span>
           </a>
 
           <a
@@ -61,7 +61,7 @@
           </a>
         </div>
 
-        <form @submit.prevent="handleSubmit" class="space-y-4">
+        <form @submit.prevent="handleSubmit" class="space-y-3 border-t border-amber-400/10 pt-4">
           <div>
             <label for="contact-name" class="sr-only">Votre nom</label>
             <input
@@ -72,7 +72,7 @@
               placeholder="Votre nom"
               autocomplete="name"
               required
-              class="w-full rounded-xl border border-amber-400/20 bg-portfolio-dark-alt/80 px-4 py-3 outline-none transition-all focus:scale-[1.01] focus:border-amber-400 focus:shadow-[0_0_25px_rgba(251,191,36,0.35)]"
+              class="w-full rounded-xl border border-amber-400/20 bg-portfolio-dark-alt/80 px-4 py-3 outline-none transition-all focus:border-amber-400 focus:shadow-[0_0_25px_rgba(251,191,36,0.35)]"
             />
           </div>
 
@@ -86,7 +86,7 @@
               placeholder="Votre email"
               autocomplete="email"
               required
-              class="w-full rounded-xl border border-amber-400/20 bg-portfolio-dark-alt/80 px-4 py-3 outline-none transition-all focus:scale-[1.01] focus:border-amber-400 focus:shadow-[0_0_25px_rgba(251,191,36,0.35)]"
+              class="w-full rounded-xl border border-amber-400/20 bg-portfolio-dark-alt/80 px-4 py-3 outline-none transition-all focus:border-amber-400 focus:shadow-[0_0_25px_rgba(251,191,36,0.35)]"
             />
           </div>
 
@@ -96,10 +96,10 @@
               id="contact-message"
               v-model="form.message"
               name="message"
-              rows="5"
+              rows="4"
               placeholder="Votre message"
               required
-              class="w-full rounded-xl border border-amber-400/20 bg-portfolio-dark-alt/80 px-4 py-3 outline-none transition-all focus:scale-[1.01] focus:border-amber-400 focus:shadow-[0_0_25px_rgba(251,191,36,0.35)]"
+              class="w-full rounded-xl border border-amber-400/20 bg-portfolio-dark-alt/80 px-4 py-3 outline-none transition-all focus:border-amber-400 focus:shadow-[0_0_25px_rgba(251,191,36,0.35)]"
             ></textarea>
           </div>
 
@@ -114,16 +114,23 @@
 
           <div
             v-if="error"
-            class="text-center text-sm text-red-400"
+            class="space-y-2 text-center text-sm text-red-400"
             role="alert"
           >
-            {{ error }}
+            <p>{{ error }}</p>
+            <a
+              v-if="mailtoFallback"
+              :href="mailtoFallback"
+              class="inline-flex text-amber-300 underline-offset-2 hover:underline"
+            >
+              Envoyer via mon application mail
+            </a>
           </div>
 
           <button
             type="submit"
             :disabled="isLoading"
-            class="relative w-full overflow-hidden rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 px-6 py-3 font-semibold text-portfolio-dark transition-all hover:-translate-y-1 hover:bg-amber-500 hover:shadow-[0_12px_30px_rgba(251,191,36,0.6)] active:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50"
+            class="w-full rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 px-6 py-3 font-semibold text-portfolio-dark transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(251,191,36,0.6)] disabled:cursor-not-allowed disabled:opacity-50"
           >
             {{ isLoading ? 'Envoi en cours...' : 'Envoyer mon message' }}
           </button>
@@ -134,7 +141,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useEmail } from '../composables/useEmail'
 
 const { isLoading, error, success, sendEmail } = useEmail()
@@ -143,6 +150,15 @@ const form = ref({
   name: '',
   email: '',
   message: ''
+})
+
+const mailtoFallback = computed(() => {
+  if (!error.value) return ''
+  const subject = encodeURIComponent(`Contact portfolio — ${form.value.name || 'Sans nom'}`)
+  const body = encodeURIComponent(
+    `${form.value.message}\n\n—\n${form.value.name}\n${form.value.email}`
+  )
+  return `mailto:valentin.verscheure@epitech.eu?subject=${subject}&body=${body}`
 })
 
 const handleSubmit = async () => {

@@ -35,10 +35,16 @@ export function useEmail() {
       success.value = true
       return true
     } catch (err) {
-      const detail = err?.text || err?.message || ''
-      error.value = detail
-        ? `Envoi impossible : ${detail}`
-        : 'Une erreur est survenue lors de l’envoi. Vérifiez la configuration EmailJS (domaine autorisé, service et template).'
+      const detail = String(err?.text || err?.message || '')
+      if (/invalid grant|reconnect your outlook/i.test(detail)) {
+        error.value =
+          'Le compte Outlook lié à EmailJS a expiré. Reconnecte Outlook dans le dashboard EmailJS (Email Services), puis réessaie.'
+      } else if (detail) {
+        error.value = `Envoi impossible : ${detail}`
+      } else {
+        error.value =
+          'Une erreur est survenue lors de l’envoi. Vérifie EmailJS (service, template, domaines autorisés).'
+      }
       return false
     } finally {
       isLoading.value = false
