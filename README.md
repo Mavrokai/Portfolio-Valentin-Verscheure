@@ -87,7 +87,7 @@ Les animations personnalisées sont définies dans `src/assets/styles/animations
 Le service EmailJS est configuré dans `src/main.js`. Pour modifier les paramètres :
 - Service ID : `service_n61vxrf`
 - Template ID : `template_cxqeb2u`
-- Public Key : `l_ce7qtvjadGdWq3w`
+- Public Key : `LjDX-Ppqsw11gIMpa`
 
 ## 📝 Notes
 

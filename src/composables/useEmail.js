@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser'
 
 const SERVICE_ID = 'service_n61vxrf'
 const TEMPLATE_ID = 'template_cxqeb2u'
-const PUBLIC_KEY = 'l_ce7qtvjadGdWq3w'
+const PUBLIC_KEY = 'LjDX-Ppqsw11gIMpa'
 
 export function useEmail() {
   const isLoading = ref(false)
