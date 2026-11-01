@@ -7,7 +7,7 @@ function sendEmail() {
         message: document.querySelector('[name="message"]').value
     };
 
-    emailjs.send("service_lmf8hyk", "template_cxqeb2u", params)
+    emailjs.send("service_n61vxrf", "template_cxqeb2u", params)
         .then(() => {
             alert("Message envoyé !");
             document.getElementById("contactForm").reset();

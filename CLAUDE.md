@@ -26,7 +26,7 @@ Single-page portfolio built with **Vue 3 (Composition API) + Vite + Tailwind CSS
 
 **Composables (`src/composables/`):**
 - `useAnimations.js` — called once in `App.vue`. Sets up: IntersectionObserver for `.animate-on-scroll` elements (adds `.visible` class), floating particles appended to `<body>`, smooth scroll for anchor links, logo heartbeat interval, and profile image parallax on mousemove. All listeners are cleaned up in `onUnmounted`.
-- `useEmail.js` — wraps EmailJS `send()` with reactive `isLoading`, `error`, `success` refs. Uses service `service_lmf8hyk` and template `template_cxqeb2u`.
+- `useEmail.js` — wraps EmailJS `send()` with reactive `isLoading`, `error`, `success` refs. Uses service `service_n61vxrf` and template `template_cxqeb2u`.
 
 **Styling:**
 - `src/assets/styles/main.css` — imports Tailwind and `animations.css`
